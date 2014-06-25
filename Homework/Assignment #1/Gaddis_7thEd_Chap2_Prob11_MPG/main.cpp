@@ -25,7 +25,7 @@ int main(int argc, char** argv) {
     float avgMPG=avgMPGT+avgMPGH/2; //Total Average Miles per Gallon
     
     //Calculations
-    avgMPG=avgMPT+avgMPGH
+    avgMPG=avgMPGT+avgMPGH;
     
     //Output
     cout<<"Average Miles per Gallon ="<<avgMPG<<" mpg"<<endl;
