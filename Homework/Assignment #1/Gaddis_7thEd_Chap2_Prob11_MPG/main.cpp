@@ -17,11 +17,19 @@ using namespace std;
 
 //Execution Begins Here...
 int main(int argc, char** argv) {
-    short Tank=20;
-    float avgMPGT=21.5;
-    float avgMPGH=26.8;
-    float avgMPG=avgMPGT+avgMPGH/2;
+    
+    //Declaring Variables
+    short Tank=20; //Tank Size
+    float avgMPGT=21.5; //Average Miles per Gallon in Town
+    float avgMPGH=26.8; //Average Miles per Gallon on Highway
+    float avgMPG=avgMPGT+avgMPGH/2; //Total Average Miles per Gallon
+    
+    //Calculations
+    avgMPG=avgMPT+avgMPGH
+    
+    //Output
     cout<<"Average Miles per Gallon ="<<avgMPG<<" mpg"<<endl;
+    
     //End of Code
     return 0;
 }
