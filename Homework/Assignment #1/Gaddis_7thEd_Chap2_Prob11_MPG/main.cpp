@@ -22,10 +22,10 @@ int main(int argc, char** argv) {
     short Tank=20; //Tank Size
     float avgMPGT=21.5; //Average Miles per Gallon in Town
     float avgMPGH=26.8; //Average Miles per Gallon on Highway
-    float avgMPG=avgMPGT+avgMPGH/2; //Total Average Miles per Gallon
+    float avgMPG; //Total Average Miles per Gallon
     
     //Calculations
-    avgMPG=avgMPGT+avgMPGH;
+    avgMPG=(avgMPGT+avgMPGH)/2;
     
     //Output
     cout<<"Average Miles per Gallon ="<<avgMPG<<" mpg"<<endl;
