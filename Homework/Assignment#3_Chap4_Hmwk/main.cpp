@@ -24,7 +24,7 @@ int main(int argc, char** argv) {
     int choice=1;
     
     //Start of Loop
-    do
+    while (choice<=10)
     {
         
         cout<<"::Menu::\n\n" //Start of the Menu
@@ -45,8 +45,9 @@ int main(int argc, char** argv) {
         switch (choice)
         {
             case 1:
+            {
                 cout<<"Question 1:The Greater Number\n\n";
-                //Declare Variables of Question 1
+                //Declare Var
                 unsigned int num1,num2,num3;
                 
                 //Input
@@ -67,7 +68,9 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
+            }
             case 2:
+            {
                 cout<<"Question 2:A Roman Numeral\n\n";
                 //Declare Variables of Question 2
                 //The Variable is the same as the very beginning of code
@@ -113,7 +116,9 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
+            }
             case 3:
+            {
                 cout<<"Question 3:A Magic Year or Not\n\n";
                 //Declare Variables
                 unsigned short Yr;//The Year Inputted
@@ -143,7 +148,9 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
+            }   
             case 4:
+            {
                 cout<<"Question 4:Which Rectangle is Larger?\n\n";
                 //Declare Variables
                 float RectL1,RectL2;//Rectangle Length 1&2
@@ -181,7 +188,9 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
+            }
             case 5:
+            {
                 cout<<"Question 5:BMI Calculator\n\n";
                 //Declare Variables
                 float BMI,Wgt,Ht;//Body Mass Index, Weight, and Height
@@ -215,7 +224,9 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
-            case 6:               
+            }
+            case 6:
+            {
                 cout<<"Question 6:Weight Calculations\n\n";
                 //Declare Variables
                 int Mass;//The Mass of the Object
@@ -243,7 +254,9 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
+            }
             case 7:
+            {
                 cout<<"Question 7:Time Calculator\n\n";
                 //Declare Variables
                 float sec,min,hrs,day;//The Seconds,Minutes,Hours,and Days
@@ -276,8 +289,10 @@ int main(int argc, char** argv) {
                 
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
-                break;
+                break;//End of Question 7
+            }
             case 8:
+            {
                 cout<<"Question 8:Counting Change\n\n";
                 //Declare Variables
                 float Qtr,Nck,Dme,Pnn;//The Amount of Quarters, Nickels,Dimes, and Pennies
@@ -318,15 +333,96 @@ int main(int argc, char** argv) {
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
+            }
             case 9:
-                cout<<"Question 9\n\n";
-                break;
+            {
+                cout<<"Question 9:Math Tutor\n\n";
+                //Declare Variables
+                unsigned seed=time(0),v1,v2;//The Random Variable
+                int v3,v4;//The Answer
+                
+                //Random Variable
+                srand(seed);//Setting up the Random Variable
+                v1=1+rand()%1000+1;
+                v2=1+rand()%1000+1;
+                
+                //Input
+                cout<<v1<<endl;
+                cout<<"+"<<v2<<endl;
+                cin>>v3;
+                cin.ignore();
+                
+                //Calculation
+                v4=v1+v2;
+                
+                //Output
+                if (v4==v3)
+                {
+                    cout<<"Your answer is correct Congratulations!\n";
+                    cout<<"Your answer was "<<v4<<endl;
+                }
+                if (v4!=v3)
+                {
+                    cout<<"Your answer was incorrect!\n";
+                    cout<<"The correct answer was!"<<v4<<endl;
+                }
+                cout<<"Press Enter to continue...\n";
+                cin.ignore();
+                break;//End of Question 9
+            }   
             case 10:
-                cout<<"Question 10\n\n";
-                break;
-            default:cout<<"Exiting Program\n";
+            {
+                cout<<"Question 10:Sales of Software\n\n";
+                //Declare Variables
+                float Sales;//Total Sales
+                unsigned short Quant;//The Quantity sold
+                
+                //Input
+                cout<<"How many units of Software were sold?\n\n";
+                cin>>Quant;
+                cin.ignore();
+                cout<<setprecision(2)<<fixed;
+                
+                //Output
+                if (Quant>=1&&Quant<=9)
+                {
+                 Sales=(Quant*99);
+                 cout<<"The Amount sold was $"<<Sales<<endl;
+                }
+                else if(Quant>=10&&Quant<=19)
+                {
+                 Sales=(Quant*99)*0.8;
+                 cout<<"The Amount sold was $"<<Sales<<endl;
+                }
+                else if(Quant>=20&&Quant<=49)
+                {
+                 Sales=(Quant*99)*0.7;
+                 cout<<"The Amount sold was $"<<Sales<<endl;
+                }
+                else if(Quant>=50&&Quant<=99)
+                {
+                 Sales=(Quant*99)*0.6;
+                 cout<<"The Amount sold was $"<<Sales<<endl;   
+                }
+                else if (Quant>=100)
+                {
+                 Sales=(Quant*99)*0.5;
+                 cout<<"The Amount sold was $"<<Sales<<endl;
+                }
+                else
+                {
+                 cout<<"The amount entered is invalid! Please Try Again?\n";  
+                }
+                cout<<"Press Enter to continue...\n";
+                cin.ignore();
+                break;//End of Question 10
+            }
+            default:
+            {
+                cout<<"Exiting Program\n";
+            }
         }
-   }while (choice <=10);
+   }
     return 0; 
 }
 
