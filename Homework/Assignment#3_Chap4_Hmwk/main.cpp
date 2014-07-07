@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <cstdlib>
 #include <cmath>
+#include <string.h>
 using namespace std;
 
 //User Libraries
@@ -121,26 +122,27 @@ int main(int argc, char** argv) {
             {
                 cout<<"Question 3:A Magic Year or Not\n\n";
                 //Declare Variables
-                unsigned short Yr;//The Year Inputted
-                unsigned short Mnth,Day;//The Month and Day Inputted
+                char date[8];
+                char *cmth, *cday, *cyr;
+                int mth, day, yr;
                 
-                //Input
-                cout<<"What Month?\n";
-                cin>>Mnth;
+                //Input 
+                cout<<"Enter the Date as MM/DD/YY\n";
+                cin>>date;
                 cin.ignore();
-                cout<<"What Day?\n";
-                cin>>Day;
-                cin.ignore();
-                cout<<"What Year (the last two digits)?\n";
-                cin>>Yr;
-                cin.ignore();
+                cmth=strtok(date,"/");
+                cday=strtok(0,"/");
+                cyr=strtok(0,"/");
+                mth=atoi(cmth);
+                day=atoi(cday);
+                yr=atoi(cyr);
                 
                 //Output
-                if(Yr==Mnth*Day)
+                if(yr==mth*day)
                 {
                     cout<<"This Year is a Magic Year!\n";
                 }
-                if(Yr!=Mnth*Day)
+                if(yr!=mth*day)
                 {
                     cout<<"This Year is Not a Magic Year!\n\n";
                 }
@@ -271,22 +273,24 @@ int main(int argc, char** argv) {
                 min=sec/6.0e1f;
                 hrs=sec/3.6e3f;
                 day=sec/8.64e4f;
-                
+                cout<<setprecision(2)<<fixed;
                 //Output
-                if(6.0e1f>sec<3.6e3f)
+                if(sec>=6.0e1f&&sec<=3.5999e3f)
                 {
                     cout<<"There are "<<min<<" minute(s)!\n";
                 }
-                else if(3.6e3f>sec>8.64e4f)
+                else if(sec>=3.6e3f&&sec<=8.63999e4f)
                 {
                     cout<<"There are "<<hrs<<" hour(s)!\n";
                 }
-                else if(sec<8.64e4f)
+                else if(sec>=8.64e4f)
                 {
                     cout<<"There are "<<day<<" day(s)!\n";
                 }
-                else cout<<"There are "<<sec<<" second(s)!\n";
-                
+                else 
+                {
+                    cout<<"There are "<<sec<<" second(s)!\n";
+                }
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;//End of Question 7
