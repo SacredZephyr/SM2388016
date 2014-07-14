@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Assignment#4_Chap5_Hmwk
+PROJECTNAME=Project_1_WheelofFortune
 
 # Active Configuration
 DEFAULTCONF=Debug

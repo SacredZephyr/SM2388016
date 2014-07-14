@@ -1,7 +1,6 @@
 /* 
  * File:   main.cpp
  * Author: Sergio R Montalvan
- *
  * Created on July 9, 2014, 10:53 AM
  */
 
@@ -11,6 +10,7 @@
 #include <cstdlib>
 #include <cmath>
 #include <string.h>
+#include <ctime>
 using namespace std;
 
 //User Libraries
@@ -48,7 +48,23 @@ int main(int argc, char** argv) {
         {
             case 1:
             { 
-                //End of Question 1
+                cout<<"Question 1: Sum of Numbers\n\n";
+                 
+                //Declare Variables
+                unsigned int num2,num3;//Number Inputted by User and Answer
+                
+                //Input
+                cout<<"Enter a Positive Integer.\n";
+                cin>>num2;
+                cin.ignore();
+                
+                //Loop with Calculations
+                while(num2<=num3)
+                {
+                    cout<<"The Sum of the numbers from "<<num2<<endl;
+                    num3+=num2;
+                    cout<<"is "<<num3<<endl;    
+                } //End of Question 1
                 cout<<"Press Enter to continue...\n";
                 cin.ignore();
                 break;
