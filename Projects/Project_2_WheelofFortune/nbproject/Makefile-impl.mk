@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Project_1_WheelofFortune
+PROJECTNAME=Project_2_WheelofFortune
 
 # Active Configuration
 DEFAULTCONF=Debug
