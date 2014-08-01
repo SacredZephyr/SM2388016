@@ -1,0 +1,15 @@
+*****************************************
+*The Objective of the Game, Wheel of    *
+*Fortune, is to win as much money as    *
+*possible before time runs out our money*
+*is used up. In this version there will *
+*be no penalty to the money lost but    *
+*the general idea of the main game are  *
+*implemented. This game is similar to   *
+*Hangman, guess the letter or guess the *
+*word and you win the round or game.    *
+*If the number of tries(10) are used up *
+*or the amount of money won or in hand  *
+*is lost then the game is over! Good    *
+*luck and have fun!Food is the Theme!   *
+*****************************************
